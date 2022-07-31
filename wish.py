@@ -1,668 +1,838 @@
 import turtle
 import random
 
-bobo = turtle.Turtle()
+# pointer = turtle.Turtle()
 
-bobo.width(8)
-bobo.color('#d700d7')
-new = turtle.getscreen()
-new.bgcolor("lightblue")
-color_lst = ['yellow', 'red', 'brown', 'blue', 'orange', 'cyan', 'green']
-back_lst = ['#daf9d7', '#9fd7e7', '#c5d107', '#9cd4d2', '#e8e4c6']
 
-# go to start of page 
-def goto_start():  
-    bobo.penup()
-    bobo.left(90)
-    bobo.forward(300)
-    bobo.left(90)
-    bobo.forward(330)
-    bobo.left(90)
+# set the name here
+NAME = "google"
+
+
+# go to start of page
+def goto_start():
+    global pointer
+    pointer.penup()
+    pointer.left(90)
+    pointer.forward(300)
+    pointer.left(90)
+    pointer.forward(330)
+    pointer.left(90)
 
 # give a space
+
+
 def space():
-    bobo.right(90)
-    bobo.forward(30)
-    bobo.left(90)
+    global pointer
+    pointer.right(90)
+    pointer.forward(30)
+    pointer.left(90)
 
 # got to next line just below
-def nextline():
-    bobo.right(180)
-    bobo.forward(60)
-    bobo.left(180)
 
-# select a new line point to left 
+
+def nextline():
+    global pointer
+    pointer.right(180)
+    pointer.forward(60)
+    pointer.left(180)
+
+# select a new line point to left
+
+
 def new_line(n=0):
-    bobo.setpos(0, 0)
-    bobo.forward(100)
-    bobo.left(90)
-    bobo.forward(300)
-    bobo.left(90)
-    bobo.forward(n)
-    bobo.right(90)
-    bobo.right(90)
+    global pointer
+    pointer.setpos(0, 0)
+    pointer.forward(100)
+    pointer.left(90)
+    pointer.forward(300)
+    pointer.left(90)
+    pointer.forward(n)
+    pointer.right(90)
+    pointer.right(90)
 
 # my initials
+
+
 def by_omrawal():
-    bobo.color('red')
-    bobo.width(6)
-    bobo.setpos(0, 0)
-    bobo.left(180)
-    bobo.forward(250)
-    bobo.right(90)
-    bobo.forward(250)
-    bobo.right(90)
+    global pointer
+    pointer.color('red')
+    pointer.width(6)
+    pointer.setpos(0, 0)
+    pointer.left(180)
+    pointer.forward(250)
+    pointer.right(90)
+    pointer.forward(250)
+    pointer.right(90)
 
-    bobo.forward(5)
-    bobo.right(90)
-    bobo.pendown()
-    bobo.forward(10)
-    bobo.penup()
-    bobo.right(90)
-    bobo.forward(10)
-    bobo.left(90)
-    bobo.forward(10)
-    bobo.left(90)
+    pointer.forward(5)
+    pointer.right(90)
+    pointer.pendown()
+    pointer.forward(10)
+    pointer.penup()
+    pointer.right(90)
+    pointer.forward(10)
+    pointer.left(90)
+    pointer.forward(10)
+    pointer.left(90)
 
-    bobo.penup()
-    bobo.right(90)
-    bobo.forward(40)
-    bobo.pendown()
-    bobo.circle(17)
-    bobo.penup()
-    # bobo.right(180)
-    bobo.forward(34)
-    bobo.left(90)
+    pointer.penup()
+    pointer.right(90)
+    pointer.forward(40)
+    pointer.pendown()
+    pointer.circle(17)
+    pointer.penup()
+    # pointer.right(180)
+    pointer.forward(34)
+    pointer.left(90)
 
-    bobo.pendown()
-    bobo.forward(34)
-    bobo.right(150)
-    bobo.forward(17)
-    bobo.left(120)
-    bobo.forward(17)
-    bobo.right(150)
-    bobo.forward(34)
-    bobo.penup()
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
+    pointer.pendown()
+    pointer.forward(34)
+    pointer.right(150)
+    pointer.forward(17)
+    pointer.left(120)
+    pointer.forward(17)
+    pointer.right(150)
+    pointer.forward(34)
+    pointer.penup()
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
 
 
 # start writing happy
 def h1():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(180)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(15)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(180)
-    bobo.forward(40)
-    bobo.penup()
-    bobo.right(180)
-    bobo.forward(40)
-    bobo.right(270)
-    bobo.forward(20)
-    bobo.right(270)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(180)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(15)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(180)
+    pointer.forward(40)
+    pointer.penup()
+    pointer.right(180)
+    pointer.forward(40)
+    pointer.right(270)
+    pointer.forward(20)
+    pointer.right(270)
 
 # a
+
+
 def a():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(15)
-    bobo.right(180)
-    bobo.forward(15)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.penup()
-    bobo.right(270)
-    bobo.forward(20)
-    bobo.right(270)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(15)
+    pointer.right(180)
+    pointer.forward(15)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.penup()
+    pointer.right(270)
+    pointer.forward(20)
+    pointer.right(270)
 
 # b
+
+
 def b():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.left(180)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.penup()
-    bobo.right(180)
-    bobo.forward(40)
-    bobo.left(90)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.left(180)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.penup()
+    pointer.right(180)
+    pointer.forward(40)
+    pointer.left(90)
 
 # c
+
+
 def c():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(180)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.forward(40)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.penup()
-    bobo.forward(20)
-    bobo.left(90)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(180)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.penup()
+    pointer.forward(20)
+    pointer.left(90)
 
 # d
+
+
 def d():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(90)
-    bobo.forward(15)
-    bobo.right(30)
-    bobo.forward(10)
-    bobo.right(60)
-    bobo.forward(25)
-    bobo.right(30)
-    bobo.forward(10)
-    bobo.right(60)
-    bobo.forward(15)
-    bobo.penup()
-    bobo.right(180)
-    bobo.forward(35)
-    bobo.left(90)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(90)
+    pointer.forward(15)
+    pointer.right(30)
+    pointer.forward(10)
+    pointer.right(60)
+    pointer.forward(25)
+    pointer.right(30)
+    pointer.forward(10)
+    pointer.right(60)
+    pointer.forward(15)
+    pointer.penup()
+    pointer.right(180)
+    pointer.forward(35)
+    pointer.left(90)
 
 # e
+
+
 def e():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.setheading(180)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.forward(15)
-    bobo.setheading(180)
-    bobo.forward(15)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.penup()
-    bobo.forward(20)
-    bobo.left(90)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.setheading(180)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.forward(15)
+    pointer.setheading(180)
+    pointer.forward(15)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.penup()
+    pointer.forward(20)
+    pointer.left(90)
 
 # f
+
+
 def f():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.penup()
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.pendown()
-    bobo.forward(20)
-    bobo.left(180)
-    bobo.penup()
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(180)
-    bobo.forward(40)
-    bobo.left(90)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.penup()
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.pendown()
+    pointer.forward(20)
+    pointer.left(180)
+    pointer.penup()
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(180)
+    pointer.forward(40)
+    pointer.left(90)
 
 # g
+
+
 def g():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(180)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.forward(40)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.forward(18)
-    bobo.left(90)
-    bobo.forward(8)
-    bobo.penup()
-    bobo.right(180)
-    bobo.forward(8)
-    bobo.right(90)
-    bobo.forward(18)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(180)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.forward(18)
+    pointer.left(90)
+    pointer.forward(8)
+    pointer.penup()
+    pointer.right(180)
+    pointer.forward(8)
+    pointer.right(90)
+    pointer.forward(18)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
 
 
 # h
 def h():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(180)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.forward(15)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.right(180)
-    bobo.forward(40)
-    bobo.penup()
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(180)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.forward(15)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.right(180)
+    pointer.forward(40)
+    pointer.penup()
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
 
 # i
+
+
 def i():
-    bobo.right(90)
-    bobo.pendown()
-    bobo.forward(20)
-    bobo.left(180)
-    bobo.forward(10)
-    bobo.right(90)
-    bobo.forward(40)
-    bobo.left(90)
-    bobo.forward(10)
-    bobo.left(180)
-    bobo.forward(20)
-    bobo.penup()
-    bobo.left(180)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.forward(40)
-    bobo.left(90)
-    bobo.forward(30)
-    bobo.forward(10)
-    bobo.left(90)
+    global pointer
+    pointer.right(90)
+    pointer.pendown()
+    pointer.forward(20)
+    pointer.left(180)
+    pointer.forward(10)
+    pointer.right(90)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(10)
+    pointer.left(180)
+    pointer.forward(20)
+    pointer.penup()
+    pointer.left(180)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(30)
+    pointer.forward(10)
+    pointer.left(90)
 
 # j
+
+
 def j():
-    bobo.right(90)
-    bobo.pendown()
-    bobo.forward(10)
-    bobo.left(90)
-    bobo.forward(40)
-    bobo.left(90)
-    bobo.forward(10)
-    bobo.right(180)
-    bobo.forward(20)
-    bobo.penup()
-    bobo.left(180)
-    bobo.forward(10)
-    bobo.left(90)
-    bobo.forward(40)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
+    global pointer
+    pointer.right(90)
+    pointer.pendown()
+    pointer.forward(10)
+    pointer.left(90)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(10)
+    pointer.right(180)
+    pointer.forward(20)
+    pointer.penup()
+    pointer.left(180)
+    pointer.forward(10)
+    pointer.left(90)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
 
 # k
+
+
 def k():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(180)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.left(30)
-    bobo.forward(30)
-    bobo.right(180)
-    bobo.forward(30)
-    bobo.left(110)
-    bobo.forward(30)
-    bobo.penup()
-    bobo.setheading(0)
-    bobo.forward(20)
-    bobo.left(90)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(180)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.left(30)
+    pointer.forward(30)
+    pointer.right(180)
+    pointer.forward(30)
+    pointer.left(110)
+    pointer.forward(30)
+    pointer.penup()
+    pointer.setheading(0)
+    pointer.forward(20)
+    pointer.left(90)
 
 # l
+
+
 def l():
-    bobo.forward(40)
-    bobo.pendown()
-    bobo.right(180)
-    bobo.forward(40)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.penup()
-    bobo.left(90)
-    bobo.forward(40)
-    bobo.right(180)
-    bobo.forward(40)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
+    global pointer
+    pointer.forward(40)
+    pointer.pendown()
+    pointer.right(180)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.penup()
+    pointer.left(90)
+    pointer.forward(40)
+    pointer.right(180)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
 
 # m
+
+
 def m():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(150)
-    bobo.forward(20)
-    bobo.left(110)
-    bobo.forward(20)
-    bobo.setheading(270)
-    bobo.forward(40)
-    bobo.penup()
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(150)
+    pointer.forward(20)
+    pointer.left(110)
+    pointer.forward(20)
+    pointer.setheading(270)
+    pointer.forward(40)
+    pointer.penup()
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
 
 # n
+
+
 def n():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(180)
-    bobo.left(30)
-    bobo.forward(40)
-    bobo.setheading(90)
-    bobo.forward(40)
-    bobo.penup()
-    bobo.right(180)
-    bobo.forward(45)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(180)
+    pointer.left(30)
+    pointer.forward(40)
+    pointer.setheading(90)
+    pointer.forward(40)
+    pointer.penup()
+    pointer.right(180)
+    pointer.forward(45)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
 
 # o
+
+
 def o():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(40)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.penup()
-    bobo.right(180)
-    bobo.forward(40)
-    bobo.left(90)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(40)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.penup()
+    pointer.right(180)
+    pointer.forward(40)
+    pointer.left(90)
 
 # p
+
+
 def p():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.penup()
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.forward(40)
-    bobo.left(90)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.penup()
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.forward(40)
+    pointer.left(90)
+
+# q
+
+
+def q():
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(40)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.penup()
+
+    pointer.right(135)
+    pointer.forward(15)
+    pointer.right(90)
+    pointer.pendown()
+    pointer.forward(15)
+    pointer.left(45)
+    pointer.penup()
+    pointer.forward(25)
+    pointer.left(90)
+
 
 # r
 def r():
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.setheading(315)
-    bobo.forward(25)
-    bobo.penup()
-    bobo.setheading(0)
-    bobo.forward(20)
-    bobo.left(90)
+    global pointer
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.setheading(315)
+    pointer.forward(25)
+    pointer.penup()
+    pointer.setheading(0)
+    pointer.forward(20)
+    pointer.left(90)
 
 # s
+
+
 def s():
-    bobo.pendown()
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.right(90)
-    bobo.forward(20)
-    bobo.penup()
-    bobo.right(90)
-    bobo.forward(40)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
+    global pointer
+    pointer.pendown()
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.penup()
+    pointer.right(90)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
 
 # t
+
+
 def t():
-    bobo.right(90)
-    bobo.forward(5)
-    bobo.left(90)
-    bobo.pendown()
-    bobo.forward(40)
-    bobo.left(90)
-    bobo.forward(10)
-    bobo.right(180)
-    bobo.forward(20)
-    bobo.penup()
-    bobo.left(180)
-    bobo.forward(10)
-    bobo.left(90)
-    bobo.forward(40)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
+    global pointer
+    pointer.right(90)
+    pointer.forward(5)
+    pointer.left(90)
+    pointer.pendown()
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(10)
+    pointer.right(180)
+    pointer.forward(20)
+    pointer.penup()
+    pointer.left(180)
+    pointer.forward(10)
+    pointer.left(90)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
 
 # u
+
+
 def u():
-    bobo.forward(40)
-    bobo.pendown()
-    bobo.right(180)
-    bobo.forward(40)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.forward(40)
-    bobo.penup()
-    bobo.right(180)
-    bobo.forward(40)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
+    global pointer
+    pointer.forward(40)
+    pointer.pendown()
+    pointer.right(180)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.forward(40)
+    pointer.penup()
+    pointer.right(180)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
 
 # v
+
+
 def v():
-    bobo.forward(40)
-    bobo.pendown()
-    bobo.right(180)
-    bobo.left(20)
-    bobo.forward(45)
-    bobo.setheading(70)
-    bobo.forward(45)
-    bobo.penup()
-    bobo.setheading(270)
-    bobo.forward(40)
-    bobo.left(90)
-    bobo.forward(20)
-    bobo.left(90)
+    global pointer
+    pointer.forward(40)
+    pointer.pendown()
+    pointer.right(180)
+    pointer.left(20)
+    pointer.forward(45)
+    pointer.setheading(70)
+    pointer.forward(45)
+    pointer.penup()
+    pointer.setheading(270)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
+
+# w
+
+
+def w():
+    global pointer
+    pointer.forward(40)
+    pointer.pendown()
+    pointer.right(180)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(15)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.right(180)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.forward(15)
+    pointer.left(90)
+    pointer.forward(40)
+    pointer.penup()
+    pointer.right(180)
+    pointer.forward(40)
+    pointer.left(90)
+    pointer.forward(20)
+    pointer.left(90)
+
+
+# x
+def x():
+    global pointer
+    pointer.pendown()
+    pointer.right(45)
+    pointer.forward(40)
+    pointer.left(180)
+    pointer.forward(20)
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.left(180)
+    pointer.forward(40)
+
+    pointer.left(45)
+    pointer.penup()
+    pointer.setheading(0)
+    pointer.forward(20)
+    pointer.left(90)
+
 
 # y
+
+
 def y():
-    bobo.right(90)
-    bobo.forward(10)
-    bobo.left(90)
-    bobo.pendown()
-    bobo.forward(20)
-    bobo.left(30)
-    bobo.forward(25)
-    bobo.right(180)
-    bobo.forward(25)
-    bobo.left(110)
-    bobo.forward(25)
-    bobo.right(180)
-    bobo.forward(25)
-    bobo.penup()
-    bobo.setheading(270)
-    bobo.forward(20)
-    bobo.left(90)
-    bobo.forward(30)
-    bobo.left(90)
+    global pointer
+    pointer.right(90)
+    pointer.forward(10)
+    pointer.left(90)
+    pointer.pendown()
+    pointer.forward(20)
+    pointer.left(30)
+    pointer.forward(25)
+    pointer.right(180)
+    pointer.forward(25)
+    pointer.left(110)
+    pointer.forward(25)
+    pointer.right(180)
+    pointer.forward(25)
+    pointer.penup()
+    pointer.setheading(270)
+    pointer.forward(20)
+    pointer.left(90)
+    pointer.forward(30)
+    pointer.left(90)
+
+# z
 
 
+def z():
+    global pointer
+    pointer.forward(40)
+    pointer.pendown()
+    pointer.right(90)
+    pointer.forward(20)
+    pointer.right(120)
+    pointer.forward(45)
+    pointer.left(120)
+    pointer.forward(20)
+    pointer.penup()
+    pointer.forward(20)
+    pointer.left(90)
 
 
+def changeColors():
+    global pointer
+    pointer.color(random.choice(color_lst))
+    screen_color.bgcolor(random.choice(back_lst))
 
 
+def drawCake():
+    global pointer
+    pointer.home()
+    pointer.forward(200)
+    pointer.pendown()
+    pointer.color("hotpink")
+    pointer.width(3)
+    pointer.speed(0)
+    square(80, 90)
+    for i in range(36):
+        pointer.right(10)
+        square(80, 90)
 
 
+def square(length, angle):
+    global pointer
+    pointer.forward(length)
+    pointer.right(angle)
+    pointer.forward(length)
+    pointer.right(angle)
+    pointer.forward(length)
+    pointer.right(angle)
+    pointer.forward(length)
+    pointer.right(angle)
 
 
+def checkWord(word):
+
+    if word == 'a':
+        a()
+    elif word == 'b':
+        b()
+    elif word == 'c':
+        c()
+    elif word == 'd':
+        d()
+    elif word == 'e':
+        e()
+    elif word == 'f':
+        f()
+    elif word == 'g':
+        g()
+    elif word == 'h':
+        h()
+    elif word == 'i':
+        i()
+    elif word == 'j':
+        j()
+    elif word == 'g':
+        g()
+    elif word == 'h':
+        h()
+    elif word == 'i':
+        i()
+    elif word == 'j':
+        j()
+    elif word == 'k':
+        k()
+    elif word == 'l':
+        l()
+    elif word == 'm':
+        m()
+    elif word == 'n':
+        n()
+    elif word == 'o':
+        o()
+    elif word == 'p':
+        p()
+    elif word == 'q':
+        q()
+    elif word == 'r':
+        r()
+    elif word == 's':
+        s()
+    elif word == 't':
+        t()
+    elif word == 'u':
+        u()
+    elif word == 'v':
+        v()
+    elif word == 'w':
+        w()
+    elif word == 'x':
+        x()
+    elif word == 'y':
+        y()
+    elif word == 'z':
+        z()
+    else:
+        print('Some Error Occured')
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+pointer = turtle.Turtle()
+pointer.width(8)
+pointer.color('#d700d7')
+screen_color = turtle.getscreen()
+screen_color.bgcolor("lightblue")
+color_lst = ['yellow', 'red', 'brown', 'blue', 'orange', 'cyan', 'green']
+back_lst = ['#daf9d7', '#9fd7e7', '#c5d107', '#9cd4d2', '#e8e4c6']
 goto_start()
-bobo.color(random.choice(color_lst))
-new.bgcolor(random.choice(back_lst))
+changeColors()
 h1()
-bobo.color(random.choice(color_lst))
-new.bgcolor(random.choice(back_lst))
+changeColors()
 a()
-bobo.color(random.choice(color_lst))
-new.bgcolor(random.choice(back_lst))
-# p()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# p()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# y()
-# nextline()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# b()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# i()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# r()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# t()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# h()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# d()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# a()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# y()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# new_line(0)
-# new.bgcolor(random.choice(back_lst))
-g()
-bobo.color(random.choice(color_lst))
-new.bgcolor(random.choice(back_lst))
-# r()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# k()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
+changeColors()
+p()
+changeColors()
+p()
+changeColors()
+y()
+nextline()
+changeColors()
+b()
+changeColors()
+i()
+changeColors()
+r()
+changeColors()
+t()
+changeColors()
+h()
+changeColors()
 d()
-bobo.color(random.choice(color_lst))
-new.bgcolor(random.choice(back_lst))
-# d()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# h()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# i()
-# bobo.color(random.choice(color_lst))
-# new.bgcolor(random.choice(back_lst))
-# by_omrawal()
-# new.bgcolor(random.choice(back_lst))
+changeColors()
+a()
+changeColors()
+y()
+changeColors()
+new_line(0)
+changeColors()
 
+for word in list(NAME.lower()):
+    print(word, " is the word")
+    checkWord(word)
+    changeColors()
 
-bobo.home()
-bobo.forward(200)
-bobo.pendown()
-bobo.color("hotpink")
-bobo.width(3)
-bobo.speed(0)
-
-
-def squre(length, angle):
-
-    bobo.forward(length)
-    bobo.right(angle)
-    bobo.forward(length)
-    bobo.right(angle)
-
-    bobo.forward(length)
-    bobo.right(angle)
-    bobo.forward(length)
-    bobo.right(angle)
-
-
-# squre(80, 90)
-
-# for i in range(36):
-#     bobo.right(10)
-#     squre(80, 90)
-
-
+changeColors()
+by_omrawal()
+changeColors()
+drawCake()
 turtle.done()
