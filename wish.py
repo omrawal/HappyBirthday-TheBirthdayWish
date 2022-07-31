@@ -5,7 +5,7 @@ import random
 
 
 # set the name here
-NAME = "google"
+NAME = "Google"
 
 
 # go to start of page
