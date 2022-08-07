@@ -8,12 +8,11 @@
   eg. I want to wish Youtube so the line 8 will look like `NAME = "YouTube"`
 3. `python wish.py`
 
+## Links
+Demo: [https://youtu.be/8CXkg3-UNZQ](https://youtu.be/8CXkg3-UNZQ) <br>
+Explanation: [https://youtu.be/c58GXOzq7wA](https://youtu.be/c58GXOzq7wA) <br>
 
-
-
-
-
-
+## Preview
 ![image](https://user-images.githubusercontent.com/51584907/182032496-a3b66c29-6363-48c5-9308-bc880a0a2d9f.png)
 ![image](https://user-images.githubusercontent.com/51584907/182032502-5137d2c5-352f-4d6c-b8eb-d18dbf4f8210.png)
 
